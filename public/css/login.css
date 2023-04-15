@@ -1,0 +1,32 @@
+.formTitle{
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(44, 94, 51);
+    text-decoration: underline;
+}
+
+.part1{
+    background-image: url('../assets/img/p1s.avif');
+    filter: blur(2px);
+    -webkit-filter: 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+}
+
+.part2{
+    margin-top: -300px;
+    background: hsla(0, 0%, 100%, 0.3);
+    backdrop-filter: blur(30px);
+}
+
+.setBackHome{
+    background-color: rgb(94, 94, 94);
+    color: white;
+}
+
+@media (max-width: 698px) {
+    .formTitle{
+        font-size: medium;
+    }
+}
