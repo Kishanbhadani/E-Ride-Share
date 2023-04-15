@@ -1,8 +1,15 @@
 import React from 'react';
+import { useState } from 'react';
 
 function ShareRide(props) {
+  
+  const ShareRideHandler = ()=>{
+    alert("your ride sharing details will reflect in 5 minutes.")
+  }
+
+
     return (
-        <section className="text-gray-600 body-font relative">
+        <form className="text-gray-600 body-font relative" onSubmit={ShareRideHandler}>
             <div className="container px-4 py-24 mx-auto flex sm:flex-nowrap">
               <div className="lg:w-2/3 md:w-1/2 bg-gray-200 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
                 <iframe width="100%" height="100%" className="absolute inset-0" frameborder="0" title="map" marginheight="0"
@@ -28,17 +35,17 @@ function ShareRide(props) {
                 <p className="leading-relaxed mb-5 text-gray-600">please you can give me below some information</p>
                 <div className="relative mb-4">
                   <label for="name" className="leading-7 text-sm text-gray-600">Full name(same as Document)</label>
-                  <input type="text" id="name" name="name" placeholder="Enter your name"
+                  <input type="text" id="name" name="name" placeholder="Enter your name" required
                     className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"></input>
                 </div>
                 <div className="relative mb-4">
                   <label for="adult" className="leading-7 text-sm text-gray-600">No of Seat</label>
-                  <input type="number" id="adult" name="adult" placeholder="Ex: 1"
+                  <input type="number" id="adult" name="adult" placeholder="Ex: 1" required
                     className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"></input>
                 </div>
                 <div className="relative mb-4">
                   <label>Gender Type</label><br></br>
-                  <input type="radio" id="male" name="gender" className="mx-4"></input>male
+                  <input type="radio" id="male" name="gender" className="mx-4" required></input>male
                   <input type="radio" id="female" name="gender" className="mx-4"></input>female
                 </div>
                 <div className="relative mb-4">
@@ -60,7 +67,7 @@ function ShareRide(props) {
                 </div>
                 <div className="relative mb-4">
                   <label for="contact" className="leading-7 text-sm text-gray-600">Contact</label>
-                  <input type="contact" id="contact" name="contact" placeholder="Ex: +91 9929879856"
+                  <input type="contact" id="contact" name="contact" required placeholder="Ex: +91 9929879856"
                     className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"></input>
                 </div>
                 <div className="relative mb-4">
@@ -69,11 +76,11 @@ function ShareRide(props) {
                     className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                 </div>
                 <button
-                  className="text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">contact me</button>
+                  className="text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg" type='submit'>Share Ride</button>
                 <p className="text-xs text-gray-500 mt-3">&copy; RideShare </p>
               </div>
             </div>
-        </section>
+        </form>
     );
 }
 
